@@ -1,3 +1,4 @@
+//https://www.codechef.com/OCT20A/problems/POSAND/
 #include<iostream>
 using namespace std;
 
