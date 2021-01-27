@@ -11,19 +11,15 @@ int main()
     cin>>b;
     for(int i=a;i<=b;i++)
     {
-        if(i==a || (i == b && b<=9))
+        if(i<10)
             cout<<numbers[i-1]<<"\n";
-        else if(i == b && b > 9)
-            cout<<"nine\n";
+        else 
+        {
+            if(i%2 == 0)
+                cout<<"even\n";
+            else
+                cout<<"odd\n";
+        }
     }
-    if(a%2 == 0)
-        cout<<"even\n";
-    else
-        cout<<"odd\n";
-    if(b%2 == 0)
-        cout<<"even\n";
-    else
-        cout<<"odd\n";
-
     return 0;
 }
