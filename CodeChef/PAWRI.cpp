@@ -6,38 +6,27 @@ int main()
 {
     int T;
     char ch[100000];
-    char check[6] = "party";
     cin>>T;
     while(T--)
     {
         cin>>ch;
-        for(int i = 0 ; i < strlen(ch) ; i++)
+        for(int i = 0 ; i < strlen(ch)-5 ; i++)
         {
-            if(ch[i] == 'p')
+            if(ch[i] == 'p' )
             {
-                int k = i+1,j = 1;
-                while(k < strlen(ch) && j<strlen(check))
-                {
-                    if(ch[k] == check[j])
-                    {
-                        k++;
-                        j++;
-                    }
-                    else
-                        break;
-                }
-                if(j == strlen(check))
-                {
-                    i = i + 2;
-                    ch[i] = 'w';
-                    ch[i+1] = 'r';
-                    ch[i+2] = 'i';
-                    i = i + 2;
-                } 
-                else
-                    i = i + j - 1;
-
+                if(ch[i+1] == 'a')
+                    if(ch[i+2] == 'r')
+                        if(ch[i+3] == 't')
+                            if(ch[i+4] == 'y')
+                            {
+                                i = i + 2;
+                                ch[i] = 'w';
+                                ch[i+1] = 'r';
+                                ch[i+2] = 'i';
+                                i = i + 2;
+                            }
             }
+
         }
         cout<<ch<<"\n";
     }
