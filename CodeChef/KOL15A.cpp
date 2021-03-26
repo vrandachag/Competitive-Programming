@@ -15,9 +15,7 @@ int main()
         for(int i = 0 ; i < S.length() ; i++)
         {
             if(isdigit(S[i]))
-            {	
-							sum_nos = sum_nos + int(S[i] - '0');
-						}
+	      sum_nos = sum_nos + int(S[i] - '0');
         }
         cout<<sum_nos<<"\n";
     }
