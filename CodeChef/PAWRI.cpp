@@ -5,12 +5,13 @@ using namespace std;
 int main() 
 {
     int T;
-    char ch[100000];
+    string ch;
     cin>>T;
     while(T--)
     {
         cin>>ch;
-        for(int i = 0 ; i < strlen(ch)-5 ; i++)
+        
+        for(int i = 0 ; i < ch.length()-4 ; i++)
         {
             if(ch[i] == 'p' )
             {
