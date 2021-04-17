@@ -5,25 +5,20 @@ using namespace std;
 
 int main() 
 {
-    int T,N;
+    int T;
     cin>>T;
     while(T--)
     {
-        int flag = 0;
+        long long int sum = 0;
+        string N;
         cin>>N;
-        for(int i = 3 ; i< N/2 ; i++)
+        for(int i = 0 ; i < N.size() ; i++)
         {
-            if(i%2 != 0)
-            {
-                if(N%i == 0)
-                {
-                    flag = 1;
-                    cout<<"YES\n";
-                    break;
-                }
-            }
+            sum+=(N[i]-'0');
         }
-        if(flag == 0)
+        if(sum%3 == 0)
+            cout<<"YES\n";
+        else
             cout<<"NO\n";
         
     }
